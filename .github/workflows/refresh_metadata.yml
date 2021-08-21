@@ -35,3 +35,4 @@ jobs:
         FOLDER: out
         CLEAN: true
         SILENT: true
+        SINGLE_COMMIT: true
