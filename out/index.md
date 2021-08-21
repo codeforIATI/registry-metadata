@@ -1,5 +1,4 @@
 ---
-title: Registry Metadata
 ---
 All the registry metadata, in two files:
 
