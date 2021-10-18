@@ -9,4 +9,4 @@ All the [IATI registry](https://iatiregistry.org) metadata, in two files.
   {% include card.html fname="/dataset_list.json" title="All datasets metadata" description="A list of dataset metadata from the registry" %}
 </div>
 
-Both files are updated every 3 hours.
+_Both files last updated on {{ site.time | date: "%d %b %Y at %l:%M%P %Z" }}_
