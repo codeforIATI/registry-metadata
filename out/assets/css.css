@@ -1,0 +1,7 @@
+.jumbotron {
+  background-color: #fff;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}

@@ -1,1 +1,9 @@
-title: Registry Metadata
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+
+title: Registry metadata
+description: All the IATI registry metadata, in two files.
