@@ -1,9 +1,7 @@
 <div class="col-md mb-4">
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title"><a href="{{ include.fname }}">{{ include.title }}</a></h5>
-        <p class="card-text">{{ include.description }}</p>
-        <a href="{{ include.fname }}" class="btn btn-primary">Download</a>
-      </div>
-    </div>
+  <a href="{{ include.fname }}" class="btn btn-outline-dark" title="Download {{ include.title }}">
+    <h5>{{ include.title | capitalize }}</h5>
+    <p>{{ include.description }}</p>
+    <p class="mb-0"><i class="fa fa-download fa-3x" aria-hidden="true"></i></p>
+  </a>
 </div>
