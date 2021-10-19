@@ -11,4 +11,4 @@ All the [IATI registry](https://iatiregistry.org) metadata, in two files.
 
 {% assign now = site.time | date_to_rfc822 %}
 
-_Both files updated every 3 hours. Last updated: <abbr title="{{ now }}" id="last-updated">{{ now }}</abbr>._
+_Both files updated every 3-4 hours. Last updated: <abbr title="{{ now }}" id="last-updated">{{ now }}</abbr>._
