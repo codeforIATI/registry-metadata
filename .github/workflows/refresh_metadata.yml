@@ -32,6 +32,8 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         personal_token: ${{ secrets.TOKEN }}
+        user_name: Code for IATI bot
+        user_email: 57559326+codeforIATIbot@users.noreply.github.com
         publish_dir: ./out
         enable_jekyll: true
         force_orphan: true
