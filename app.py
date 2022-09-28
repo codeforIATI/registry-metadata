@@ -1,3 +1,4 @@
+import csv
 import json
 from os.path import join
 import time
@@ -51,6 +52,25 @@ def fetch_publishers():
     with open(join("out", "publisher_list.json"), "w") as fp:
         json.dump(output, fp)
 
+    return output["result"]
+
+
+def generate_mappings(publishers):
+    mappings = {
+        x["name"]: list(set([y["old_name"] for y in x["historical_publisher_names"]]))
+        for x in publishers
+        if x["historical_publisher_names"]
+    }
+
+    with open(join("out", "registry_id_relationships.csv"), "w") as fh:
+        writer = csv.DictWriter(fh, fieldnames=["current_registry_id", "previous_registry_id"])
+        writer.writeheader()
+        for current_name, old_names in mappings.items():
+            for old_name in old_names:
+                _ = writer.writerow({
+                    "current_registry_id": current_name,
+                    "previous_registry_id": old_name,
+                })
 
 def fetch_datasets():
     page = 1
@@ -74,5 +94,6 @@ def fetch_datasets():
         json.dump(output, fp)
 
 
-fetch_publishers()
+publishers = fetch_publishers()
+generate_mappings(publishers)
 fetch_datasets()
