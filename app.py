@@ -40,7 +40,10 @@ def fetch_publishers():
     for id_ in ids:
         data = fetch(
             "organization_show",
-            params={"id": id_})
+            params={
+                "id": id_,
+                "show_historical_publisher_names": "true",
+            })
         output["result"].append(data)
 
     with open(join("out", "publisher_list.json"), "w") as fp:
