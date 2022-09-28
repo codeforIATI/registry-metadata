@@ -9,4 +9,4 @@ Both files are updated every 3-4 hours.
 
 ---
 
-**_\*BONUS!\*_** A CSV of [mappings of past publisher ID to current publisher IDs](https://registry.codeforiati.org/registry_id_relationships.csv)
+**_\*BONUS!\*_** A CSV of [mappings of past to current publisher IDs](https://registry.codeforiati.org/registry_id_relationships.csv)

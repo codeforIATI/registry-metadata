@@ -15,4 +15,4 @@ _Both files update every 3-4 hours. Last updated: <abbr title="{{ now }}" id="la
 
 ---
 
-**_\*BONUS!\*_** A CSV of [mappings of past publisher ID to current publisher IDs](registry_id_relationships.csv)
+**_\*BONUS!\*_** A CSV of [mappings of past to current publisher IDs](registry_id_relationships.csv)
