@@ -22,6 +22,8 @@ def fetch(path, *args, **kwargs):
             r = _fetch(API_BASE_URL + path, *args, **kwargs)
             break
         except Exception as e:
+            print("Retrying in 5 seconds")
+            time.sleep(5)
             attempts -= 1
             if attempts == 0:
                 raise e
