@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:url" content="{{ site.github.url }}">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:image" content="{{ site.github.url }}/assets/logo-square.png?v={{ site.github.build_revision }}">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ site.title }}" />
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="{{ site.github.url }}/assets/logo-square.png?v={{ site.github.build_revision }}">
+
+    <link rel="icon" href="{{ site.github.url }}/favicon.ico?ver={{ site.github.build_revision }}">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css.css?ver={{ site.github.build_revision }}">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>{{ site.title }}</title>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header>
+        <nav class="navbar navbar-light bg-light">
+          <div class="container justify-content-start">
+            <button class="navbar-toggler mr-3" type="button" data-c4i-toggle="sidebar" type="button" aria-controls="c4i-sidebar" aria-expanded="false" aria-label="Toggle Code for IATI sidebar"><span class="navbar-toggler-icon"></span></button>
+            <a href="/" class="navbar-brand"><img width="100px" src="/assets/logo.png" title="A project of Code for IATI"></a>
+          </div>
+        </nav>
+    </header>
+
+    <main role="main" class="flex-shrink-0 text-center">
+      <section class="jumbotron">
+          <div class="container">
+              <h1>{{ page.title }}</h1>
+              {{ content }}
+          </div>
+      </section>
+    </main>
+
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted">A <a href="https://codeforiati.org">Code for IATI</a> project.<br><a href="https://github.com/codeforIATI/registry-metadata">Source code</a> | <a href="https://github.com/codeforIATI/registry-metadata/issues/new/choose">Report a bug</a></span>
+      </div>
+    </footer>
+    <script src="//codeforiati.org/sidebar/sidebar.min.js"></script>
+    <script src="/assets/js.js?ver={{ site.github.build_revision }}"></script>
+  </body>
+</html>
