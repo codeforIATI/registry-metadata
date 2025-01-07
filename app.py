@@ -7,17 +7,24 @@ import requests
 
 
 API_BASE_URL = "https://iatiregistry.org/api/action/"
+REQUEST_HEADERS = {
+    "User-Agent": "CodeForIATI Registry Metadata https://registry.codeforiati.org"
+}
 
 
 def fetch(path, *args, **kwargs):
     def _fetch(*args, **kwargs):
-        print(args, kwargs)
         r = requests.get(*args, **kwargs)
         time.sleep(0.1)
         r.raise_for_status()
         return r
 
+    print(path, args, kwargs)
+    headers = kwargs.get("headers", {})
+    kwargs["headers"] = {**headers, **REQUEST_HEADERS}
+
     attempts = 5
+
     while True:
         try:
             r = _fetch(API_BASE_URL + path, *args, **kwargs)
