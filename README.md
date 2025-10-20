@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> This project is now maintained by Open Data Services. You can find the source code here: https://github.com/IATI/codeforiati-registry-metadata
+
+---
+
 # Registry Metadata
 
 All the registry metadata, in two files:
